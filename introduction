@@ -1,0 +1,292 @@
+
+print ('')
+print ('Hi there!')
+print ('Can I meet you? [y/n]')
+print('--------------------------------')
+response = input()
+response = response.lower()
+print('')
+if response == 'y':
+	print('--------------------------------')
+	print ('Thank you')
+	print ('I am Abdul-Azeez Ilyas')
+	print('--------------------------------')
+	print('')
+	print ('What is your name?')
+	name = input()
+	print ('Nice to meet you ' + name)
+	print('--------------------------------')
+	print('')
+	print ('Will you like to know more about me? [y/n]')
+	response = input()
+	response = response.lower()
+	print('--------------------------------')
+	if response == 'y':
+		print('')
+		print('What will you like to know first? \n 1. Institution \n 2. State \n 3. Course \n 4. color')
+
+		def choice():
+			response = int(input())
+			if response == 1:
+				print('')
+				print('You have chosen to know the Institution I attended')
+				print('I am a graduate of Univeristy of Ibadan')
+				print('--------------------------------')
+			elif response == 2:
+				print('')
+				print('You have chosen to know my State of Origin')
+				print('I am from Oyo State Nigeria')
+				print('--------------------------------')
+			elif response == 3:
+				print('')
+				print('You have chosen to know the Course I studied')
+				print('I studied Computer Science')
+				print('--------------------------------')
+			elif response == 4:
+				print('')
+				print('You have chosen to know my favorite color')
+				print('My favorite color is Green')
+				print('--------------------------------')
+			else:
+				print('Pick either 1, 2, 3 or 4')
+				choice()
+			print('--------------------------------')
+			print('Will you like to know more? [y/n]')
+			response = input()
+			print('--------------------------------')
+			response = response.lower()
+			if response == 'y':
+				print('')
+				print('What will you like to know next? \n 1. Institution \n 2. State \n 3. Course \n 4. color')
+				choice()
+				print('--------------------------------')
+			else:
+				print('')
+				print('Sorry about that, I thought you would have liked to know more')
+				#break
+				print('--------------------------------')
+		choice()
+		print('')
+		print('--------------------------------')
+		your_occupation = input('What do you do?')
+		print(your_occupation)
+		print('')
+		your_state = input('What State are you from?')
+		print(your_state)
+		print('')
+		your_color = input('What is your favorite color?')
+		print(your_color)
+		print('--------------------------------')
+		print ('Its nice meeting you ' + name + ' from ' + your_state + ' whose favorite color is ' + your_color)
+		print('')
+		print('Will you like to exchange contacts? [y/n]')
+		response = input()
+		print('--------------------------------')
+		if response == 'y':
+			print('')
+			print('08146500725 is my number')
+			print('I will like to have yours')
+			your_no = input()
+			print('--------------------------------')
+  			#if your_no != int:
+  				#print('Your number is incorrect, please provide the correct number')
+  				#your_no = input()
+  			#else:
+			print('--------------------------------')
+			print('Thank you, I will save your number ' + your_no + ' with your name ' + name)
+			print('Once again, thank you for the oppurtunity to meet you')
+			print('--------------------------------')		
+		elif response == 'n':
+			print ('I understand you do not like exchanging contacts')
+			print ('Its my pleasure meeting you')
+		else:
+			print('Please reply with either y/n')
+	elif response == 'n':
+		print ('Sorry about that, I thought you would have liked to know more')
+		print ('I guess the few you know about me is enough')
+		print ('Thanks for giving me the oppurtunity to meet you')
+	else:
+		print ('Please reply with either y/n')
+elif response == 'n':
+	print ('Okay! its fine if you do not like to talk to strangers')
+	print ('')
+	print ('I just thought I should get to know you at the very leart')
+else:
+	print ('Please reply with either y or n')
+print('Will you like to play a game with me? [y/n]')
+response = input()
+response = response.lower()
+print('--------------------------------')	
+if response == 'y':
+	print('--------------------------------')		
+	print('Welcome to my guessing game')
+	print('In this game, you have to guess correctly, the number to be displayed by the computer')
+	print('Lets begin')
+	print('--------------------------------')		
+	import random
+	guessTaken = 0
+	totalGuess = 7
+	#total = 10
+	number = random.randint(1, 50)
+	print('......Loading')
+	print('Well, ' + name + ' I am thinking of a number between 1 and 50')
+	#for x in total:
+		#one = input('Enter your guess ' + x)
+		#onee = random.randint(1,21)*5
+	while guessTaken < 7:
+		print('')
+		print('Take a guess.')
+		guess = input()
+		guess = int(guess)	
+		print('--------------------------------')
+		totalGuess = int(totalGuess) - 1
+		totalGuess = str(totalGuess)
+		print('NOTE! You have ' + totalGuess + ' guesses left')	
+		guessTaken  = guessTaken + 1
+		if guess < number:
+			print('Your guess is too low')
+			print('--------------------------------')		
+		if guess > number:
+			print('Your guess is too high')
+			print('--------------------------------')		
+		if guess == number:
+			break
+	if guess == number:
+		guessTaken = str(guessTaken)
+		print('Good job, ' + name + '! You guessed my number in ' + guessTaken + ' guesses!')
+		print('You are good in guessing game')
+		print('--------------------------------')		
+	if guess != number:
+		number = str(number)
+		print('It seems you are not so good at guessing')
+		print('Nope. The number I was thinking of was ' + number)
+		print('--------------------------------')				
+# 		print(onee)
+# 		if one == onee:
+# 			print('Wow! you guessed right')
+# 			score = score + 1
+# 			print('Your score is ' + score)
+# 		else:
+# 			print('You are wrong')
+# 			print('Your score is ' + score)
+# 	print('Your total score is ' + score + ' out of ' + total)
+# else:
+# 	print('I thought you would have liked to play a game with me')
+# 	print('Thank you and have a nice day')
+
+
+# This is a guess the number game.
+
+#  2. import random
+
+#  4. guessesTaken = 0
+
+#  6. print('Hello! What is your name?')
+
+#  7. myName = input()
+
+#  9. number = random.randint(1, 20)
+
+# 10. print('Well, ' + myName + ', I am thinking of a number between 1 and 20.')
+
+# 12. while guessesTaken < 6:
+
+# 13.     print('Take a guess.') # There are four spaces in front of print.
+
+# 14.     guess = input()
+
+# 15.     guess = int(guess)
+
+# 17.     guessesTaken = guessesTaken + 1
+
+# 19.     if guess < number:
+
+# 20.         print('Your guess is too low.') # There are eight spaces in front of print.
+
+# 22.     if guess > number:
+
+# 23.         print('Your guess is too high.')
+
+# 25.     if guess == number:
+
+# 26.         break
+
+# 28. if guess == number:
+
+# 29.     guessesTaken = str(guessesTaken)
+
+# 30.     print('Good job, ' + myName + '! You guessed my number in ' + guessesTaken + ' guesses!')
+
+# 31.
+
+# 32. if guess != number:
+
+# 33.     number = str(number)
+
+# 34.     print('Nope. The number I was thinking of was ' + number)
+
+# 		print('')
+# 		print ('Will you like to know more? [y/n]')
+# 		print('What will you like to know next?')
+# 		response = input()
+# 		if response == questions[0]:
+# 			print('')
+# 			print('you have chosen to know the Institution I attended')
+# 			print('I am a graduate of Univeristy of Ibadan')
+# 		elif response == questions[1]:
+# 			print('')
+# 			print('you have chosen to know my State of Origin')
+# 			print('I am from Oyo State Nigeria')
+# 		elif response == questions[2]:
+# 			print('')
+# 			print('you have chosen to know the Course I studied')
+# 			print('I studied Computer Science')
+# 		elif response == questions[3]:
+# 			print('')
+# 			print('you have chosen to know my favorite color')
+# 			print('My favorite color is Green')
+# 		else:
+# 			print('Pick one of Institution, State, Course and color')
+# 		print('')
+# 		print('What will you like to know next?')
+# 		response = input()
+# 		if response == questions[0]:
+# 			print('')
+# 			print('you have chosen to know the Institution I attended first')
+# 			print('I am a graduate of Univeristy of Ibadan')
+# 		elif response == questions[1]:
+# 			print('')
+# 			print('you have chosen to know my State of Origin first')
+# 			print('I am from Oyo State Nigeria')
+# 		elif response == questions[2]:
+# 			print('')
+# 			print('you have chosen to know the Course I studied first')
+# 			print('I studied Computer Science')
+# 		elif response == questions[3]:
+# 			print('')
+# 			print('you have chosen to know my favorite color first')
+# 			print('My favorite color is Green')
+# 		else:
+# 			print('Pick one of Institution, State, Course and color')
+# 		print('')
+# 		print('What will you like to know next?')
+# 		response = input()
+# 		if response == questions[0]:
+# 			print('')
+# 			print('you have chosen to know the Institution I attended first')
+# 			print('I am a graduate of Univeristy of Ibadan')
+# 		elif response == questions[1]:
+# 			print('')
+# 			print('you have chosen to know my State of Origin first')
+# 			print('I am from Oyo State Nigeria')
+# 		elif response == questions[2]:
+# 			print('')
+# 			print('you have chosen to know the Course I studied first')
+# 			print('I studied Computer Science')
+# 		elif response == questions[3]:
+# 			print('')
+# 			print('you have chosen to know my favorite color first')
+# 			print('My favorite color is Green')
+# 		else:
+# 			print('Pick one of Institution, State, Course and color')
+ 		
